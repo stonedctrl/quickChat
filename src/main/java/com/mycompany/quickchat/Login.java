@@ -9,8 +9,8 @@ package com.mycompany.quickchat;
  * @author kamot
  */
 public class Login {
-    static String username;
-    static String password;
+    public static String username;
+    public static String password;
     //check if username has correct format
     public static boolean checkUserName(String name){
         if (name.isEmpty()) {
@@ -105,7 +105,7 @@ public class Login {
         }
     }
     public static boolean loginUser(String name, String pass) {
-        if (name.isEmpty() || pass.isEmpty()) {
+        if (name == null|| name.isEmpty() || pass.isEmpty()) {
             return false;
         } else {
         return name.equals(username) && pass.equals(password);
