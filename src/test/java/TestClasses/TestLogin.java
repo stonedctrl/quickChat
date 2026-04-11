@@ -86,11 +86,13 @@ public class TestLogin {
        boolean expected= Login.checkPasswordComplexity("password");
        assertFalse(expected);
        }
+        //tests if phone number format is correct = true
        @Test
        public void TestPhoneNum() {
        boolean expected= Login.checkPasswordComplexity("+27123456789");
        assertFalse(expected);
        }
+       //tests if phone number format is correct = false
        @Test
        public void TestIncPhoneNum() {
        boolean expected= Login.checkCellPhoneNumber("08966553");
