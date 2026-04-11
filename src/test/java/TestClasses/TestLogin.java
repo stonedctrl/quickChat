@@ -59,24 +59,33 @@ public class TestLogin {
        assertTrue(expected);
    }
     @Test
-       public void TestLoginIncName() {
-       boolean expected= Login.loginUser("kyle!!!!!!!", Login.password="U$3rN@m3");
-       assertFalse(expected);
+       public void TestUSERNAME() {
+       boolean expected= Login.checkUserName("ka_mo");
+       assertTrue(expected);
    }
-       public void TestLoginIncPass() {
-       boolean expected= Login.loginUser(Login.username="ka_mo", "password");
+       public void TestUSERNAMEInc() {
+       boolean expected= Login.checkUserName("kyle!!!!");
        assertFalse(expected);
        }
        @Test
-       public void TestLoginEmpty() {
-       boolean expected= Login.loginUser("","");
+       public void TestPassCompl() {
+       boolean expected= Login.checkPasswordComplexity("U$3rN@m3");
+       assertTrue(expected);
+       }
+       @Test
+       public void TestIncPassCompl() {
+       boolean expected= Login.checkPasswordComplexity("password");
        assertFalse(expected);
        }
        @Test
-       public void TestLoginNull() {
-       boolean expected= Login.loginUser(null,null);
+       public void TestPhoneNum() {
+       boolean expected= Login.checkPasswordComplexity("+27123456789");
        assertFalse(expected);
        }
        @Test
+       public void TestIncPhoneNum() {
+       boolean expected= Login.checkCellPhoneNumber("08966553");
+       assertFalse(expected);
+       }
        
 }

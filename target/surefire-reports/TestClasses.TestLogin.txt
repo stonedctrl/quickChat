@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: TestClasses.TestLogin
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.033 s <<< FAILURE! - in TestClasses.TestLogin
+TestIncorrectUserName  Time elapsed: 0.017 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at TestClasses.TestLogin.TestIncorrectUserName(TestLogin.java:30)
+
+TestIncorrectPassword  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at TestClasses.TestLogin.TestIncorrectPassword(TestLogin.java:42)
+
+TestIncorrectCellphone  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at TestClasses.TestLogin.TestIncorrectCellphone(TestLogin.java:54)
+
