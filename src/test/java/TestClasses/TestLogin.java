@@ -43,37 +43,44 @@ public class TestLogin {
        boolean actual= Login.checkPasswordComplexity("password");
        assertEquals(expected, actual);
    }
+   //tests if phone number is formatted correctly = true
    @Test
    public void TestCorrectCellphone() {
        boolean expected= Login.checkCellPhoneNumber("+27123456789");
        boolean actual= Login.checkCellPhoneNumber("+27838968976");
        assertEquals(expected, actual);
    }
+   //tests if phone number is formatted correctly = false
     @Test
        public void TestIncorrectCellphone() {
        boolean expected= Login.checkCellPhoneNumber("+27123456789");
        boolean actual= Login.checkCellPhoneNumber("08966553");
        assertEquals(expected, actual);
    }
+    //tests if user exists = true
     @Test
        public void TestLoginPass() {
        boolean expected= Login.loginUser(Login.username = "ka_mo", Login.password="U$3rN@m3");
        assertTrue(expected);
    }
+       //tests if username format is correct = true
     @Test
        public void TestUSERNAME() {
        boolean expected= Login.checkUserName("ka_mo");
        assertTrue(expected);
    }
+       //tests if username format is correct = false
        public void TestUSERNAMEInc() {
        boolean expected= Login.checkUserName("kyle!!!!");
        assertFalse(expected);
        }
+       //tests if password format is correct = true
        @Test
        public void TestPassCompl() {
        boolean expected= Login.checkPasswordComplexity("U$3rN@m3");
        assertTrue(expected);
        }
+        //tests if password format is correct = false
        @Test
        public void TestIncPassCompl() {
        boolean expected= Login.checkPasswordComplexity("password");
