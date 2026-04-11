@@ -29,6 +29,7 @@ public class TestLogin {
        boolean actual = Login.checkUserName("kyle!!!!!!!!");
        assertEquals(expected, actual);
    }
+   //tests if password is formatted correctly = true
    @Test
    public void TestCorrectPassword() {
        boolean expected= Login.checkPasswordComplexity("U$3rN@m3");
