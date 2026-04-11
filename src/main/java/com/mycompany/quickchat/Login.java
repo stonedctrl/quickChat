@@ -70,6 +70,7 @@ public class Login {
             }
             
         }
+    //check if phone number has coorect format
     public static boolean checkCellPhoneNumber(String cellNumber) {
         String countryCode = "+27";
         int number;
