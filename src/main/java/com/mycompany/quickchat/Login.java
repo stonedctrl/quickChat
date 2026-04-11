@@ -90,7 +90,7 @@ public class Login {
                 }       
             }
         }
-        
+        //register user
     public static String registerUser(String name, String pass) {
         if (checkUserName(name) != true) {
             return "The username is incorrectly formatted.";
@@ -105,6 +105,7 @@ public class Login {
             return "The username and password meet the requirements." + name +  " is successfully registered.";
         }
     }
+    //log user in
     public static boolean loginUser(String name, String pass) {
         if (name == null|| name.isEmpty() || pass.isEmpty()) {
             return false;
@@ -112,6 +113,7 @@ public class Login {
         return name.equals(username) && pass.equals(password);
         }
     }
+    //check if user exists
     public static String returnLoginStatus(String name, String pass) {
         if (loginUser(name, pass) == true) {
             return "Logged in successfully.";
