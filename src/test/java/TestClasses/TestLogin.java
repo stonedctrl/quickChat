@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author kamot
  */
 public class TestLogin {
-    
+    //tests if the user name is formatted correctly
    @Test
    public void TestCorrectUserName() {
      
