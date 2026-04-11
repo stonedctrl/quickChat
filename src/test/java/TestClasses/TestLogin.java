@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author kamot
  */
 public class TestLogin {
-    //tests if the user name is formatted correctly
+    //tests if the user name is formatted correctly= true
    @Test
    public void TestCorrectUserName() {
      
@@ -21,7 +21,7 @@ public class TestLogin {
        boolean actual = Login.checkUserName("kyl_1");
        assertEquals(expected, actual);
    }
-    
+    //tests if the user name is formatted correctly = false
    @Test
    public void TestIncorrectUserName() {
      
