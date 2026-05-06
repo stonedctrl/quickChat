@@ -4,7 +4,6 @@
  */
 package com.mycompany.quickchat;
 import java.util.Scanner;
-import com.mycompany.quickchat.Login;
 
 /**
  *

@@ -107,7 +107,7 @@ public class Login {
     }
     //log user in
     public static boolean loginUser(String name, String pass) {
-        if (name == null|| name.isEmpty() || pass.isEmpty()) {
+        if (name.isEmpty() || pass.isEmpty()) {
             return false;
         } else {
         return name.equals(username) && pass.equals(password);
