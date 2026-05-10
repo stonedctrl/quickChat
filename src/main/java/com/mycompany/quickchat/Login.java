@@ -102,7 +102,7 @@ public class Login {
         else {
             username = name;
             password = pass;
-            return "The username and password meet the requirements." + name +  " is successfully registered.";
+            return "The username and password meet the requirements. " + name +  " is successfully registered.";
         }
     }
     //log user in

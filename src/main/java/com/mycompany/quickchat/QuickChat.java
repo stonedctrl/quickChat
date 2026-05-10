@@ -9,6 +9,10 @@ import java.util.Scanner;
  *
  * @author kamot
  */
+
+class message{
+    
+}
 public class QuickChat {
 
     /**
@@ -31,6 +35,8 @@ public class QuickChat {
         String cellNumber = "";
         String loginName = "";
         String loginPass = "";
+        int numMessage ;
+        int option;
         //username input
         while(Login.checkUserName(name) == false) {
             System.out.println("Enter a username: ");
@@ -49,7 +55,7 @@ public class QuickChat {
             cellNumber = scn.nextLine();
         }
         System.out.println(Login.registerUser(name, password));
-        
+        //login
         while(Login.loginUser(loginName, loginPass) == false) {
             
             System.out.println("Please enter login details \nEnter username: ");
@@ -58,6 +64,39 @@ public class QuickChat {
             loginPass= scn.nextLine();
             System.out.println(Login.returnLoginStatus(loginName,loginPass));
         }
+        
+        while(Login.loginUser(loginName, loginPass)){
+        System.out.println("Welcome to QuickChat \nOption 1) Send Messages \nOption 2) Show recently sent messages - This feature is is still under development. \nOption 3) Quit \n");
+        option = scn.nextInt();
+           
+        
+            if (option == 1){
+              System.out.print("How many message do you wish to send: ");
+              numMessage = scn.nextInt() -1;
+              
+            }
+            else if (option == 2){
+                System.out.println("COMING SOON! \n");
+            }
+           
+            else if ( option == 3){
+                System.out.println("Bye!");
+                loginName= "";
+                loginPass="";
+            }
+    
+            else {
+                int i = 0;
+                while(i<option) {
+                   i++;
+                System.out.println("why");
+            }
+                
+            }
+            
+        }
+       
+        
         
     }
     
