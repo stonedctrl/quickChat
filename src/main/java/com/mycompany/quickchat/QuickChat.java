@@ -35,7 +35,7 @@ public class QuickChat {
         String cellNumber = "";
         String loginName = "";
         String loginPass = "";
-        int numMessage ;
+        int numMessage =0;
         int option;
         //username input
         while(Login.checkUserName(name) == false) {
@@ -72,7 +72,7 @@ public class QuickChat {
         
             if (option == 1){
               System.out.print("How many message do you wish to send: ");
-              numMessage = scn.nextInt() -1;
+              numMessage = Integer.parseInt(scn.nextLine());
               
             }
             else if (option == 2){
