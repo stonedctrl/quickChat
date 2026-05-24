@@ -4,6 +4,9 @@
  */
 package com.mycompany.quickchat;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
+
 
 /**
  *
@@ -35,7 +38,11 @@ public class QuickChat {
         String cellNumber = "";
         String loginName = "";
         String loginPass = "";
-        int numMessage =0;
+        int numMessage ;
+        String msgStr;
+        ArrayList<String>  msg= new ArrayList<>();
+        ArrayList<Long> msgId = new ArrayList<>();
+        
         int option;
         //username input
         while(Login.checkUserName(name) == false) {
@@ -67,12 +74,44 @@ public class QuickChat {
         
         while(Login.loginUser(loginName, loginPass)){
         System.out.println("Welcome to QuickChat \nOption 1) Send Messages \nOption 2) Show recently sent messages - This feature is is still under development. \nOption 3) Quit \n");
-        option = scn.nextInt();
+        option = Integer.parseInt(scn.nextLine());
            
         
             if (option == 1){
+                System.out.println("Enter recipient phone number");
+                String recipientNumber = scn.nextLine();
+                while(!Login.checkCellPhoneNumber(recipientNumber)){
+                    
+                    recipientNumber = scn.nextLine();
+                }
               System.out.print("How many message do you wish to send: ");
               numMessage = Integer.parseInt(scn.nextLine());
+              
+              
+              for (int i =0; i<numMessage; i++){
+                  System.out.println("Enter message: ");
+                  msgStr = scn.nextLine();
+                  if (msgStr.length()<250){
+                    System.out.println("message sent.");
+                    long min = 1_000_000_000L;
+                    long max = 10_000_000_000L;
+                    long randomNum = ThreadLocalRandom.current().nextLong(min, max);
+
+
+                    while(msgId.contains(randomNum)){
+                        randomNum = ThreadLocalRandom.current().nextLong(min, max);
+
+                    }
+                    msgId.add(randomNum);
+                    msg.add(msgStr);
+                  } 
+                  else {
+                    System.out.println("Please enter a message of less than 250 characters.");
+                    i--;
+
+                  }
+                  
+              }
               
             }
             else if (option == 2){
