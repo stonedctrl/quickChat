@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestClasses.TestLogin" time="0.033" tests="12" errors="0" skipped="0" failures="3">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestClasses.TestLogin" time="0.028" tests="13" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\kamot\Documents\NetBeansProjects\quick_Chat\target\test-classes;C:\Users\kamot\Documents\NetBeansProjects\quick_Chat\target\classes;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\kamot\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\kamot\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\kamot\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\kamot\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="java.class.path" value="C:\Users\kamot\Documents\NetBeansProjects\quickChat\target\test-classes;C:\Users\kamot\Documents\NetBeansProjects\quickChat\target\classes;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\kamot\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\kamot\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\kamot\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\kamot\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\kamot\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="user.country" value="ZA"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin"/>
-    <property name="sun.java.command" value="C:\Users\kamot\AppData\Local\Temp\surefire6627222868149340733\surefirebooter9250217242557166687.jar C:\Users\kamot\AppData\Local\Temp\surefire6627222868149340733 2026-04-11T23-40-58_369-jvmRun1 surefire2441295655865667179tmp surefire_016290926658068835329tmp"/>
+    <property name="sun.java.command" value="C:\Users\kamot\AppData\Local\Temp\surefire15026549339127280050\surefirebooter1510619131523954358.jar C:\Users\kamot\AppData\Local\Temp\surefire15026549339127280050 2026-05-24T21-58-57_595-jvmRun1 surefire15836415953562113304tmp surefire_014300748497930312599tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\kamot\Documents\NetBeansProjects\quick_Chat\target\test-classes;C:\Users\kamot\Documents\NetBeansProjects\quick_Chat\target\classes;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\kamot\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\kamot\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\kamot\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\kamot\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\kamot\Documents\NetBeansProjects\quickChat\target\test-classes;C:\Users\kamot\Documents\NetBeansProjects\quickChat\target\classes;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\kamot\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\kamot\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\kamot\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\kamot\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\kamot\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\kamot\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\kamot"/>
     <property name="user.language" value="en"/>
@@ -25,12 +25,12 @@
     <property name="java.version.date" value="2026-01-20"/>
     <property name="java.home" value="C:\Program Files\Apache NetBeans\jdk"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\kamot\Documents\NetBeansProjects\quick_Chat"/>
+    <property name="basedir" value="C:\Users\kamot\Documents\NetBeansProjects\quickChat"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\kamot\AppData\Local\Temp\surefire6627222868149340733\surefirebooter9250217242557166687.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\kamot\AppData\Local\Temp\surefire15026549339127280050\surefirebooter1510619131523954358.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.2+10-LTS"/>
@@ -47,12 +47,12 @@
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="C:\Users\kamot\AppData\Local\Temp\"/>
     <property name="java.version" value="25.0.2"/>
-    <property name="user.dir" value="C:\Users\kamot\Documents\NetBeansProjects\quick_Chat"/>
+    <property name="user.dir" value="C:\Users\kamot\Documents\NetBeansProjects\quickChat"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Calibre2\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Users\kamot\.local\bin;C:\Users\kamot\AppData\Local\Microsoft\WindowsApps;C:\Users\kamot\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\kamot\AppData\Local\Python\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.2\bin;C:\Program Files\JetBrains\PyCharm 2025.3.2.1\bin;C:\Users\kamot\AppData\Roaming\npm;C:\Users\kamot\AppData\Local\GitHubDesktop\bin;C:\Program Files\Apache NetBeans\bin\;."/>
+    <property name="java.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Calibre2\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;\\?\C:\Users\kamot\AppData\Local\Programs\Jan\resources\bin;C:\Users\kamot\.local\bin;C:\Users\kamot\AppData\Local\Microsoft\WindowsApps;C:\Users\kamot\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\kamot\AppData\Local\Python\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.2\bin;C:\Program Files\JetBrains\PyCharm 2025.3.2.1\bin;C:\Users\kamot\AppData\Roaming\npm;C:\Users\kamot\AppData\Local\GitHubDesktop\bin;C:\Users\kamot\Documents\ffmpeg\bin;;C:\Program Files\Apache NetBeans\bin\;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Eclipse Adoptium"/>
@@ -61,39 +61,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="TestIncorrectUserName" classname="TestClasses.TestLogin" time="0.017">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at TestClasses.TestLogin.TestIncorrectUserName(TestLogin.java:30)
-]]></failure>
-    <system-out><![CDATA[Username is not correctly formatted; 
-please ensure that your username contains an underscore and is 
-no more than five characters in length
-]]></system-out>
-  </testcase>
+  <testcase name="TestIncorrectUserName" classname="TestClasses.TestLogin" time="0.011"/>
+  <testcase name="TestUSERNAMEInc" classname="TestClasses.TestLogin" time="0"/>
   <testcase name="TestIncPhoneNum" classname="TestClasses.TestLogin" time="0"/>
-  <testcase name="TestIncPassCompl" classname="TestClasses.TestLogin" time="0.001"/>
-  <testcase name="TestPhoneNum" classname="TestClasses.TestLogin" time="0"/>
-  <testcase name="TestIncorrectPassword" classname="TestClasses.TestLogin" time="0">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at TestClasses.TestLogin.TestIncorrectPassword(TestLogin.java:42)
-]]></failure>
-    <system-out><![CDATA[Password is not correctly formatted; 
-please ensure that the password contains at least eight characters, 
-a capital letter, a number, and a special character.
-]]></system-out>
-  </testcase>
+  <testcase name="TestIncPassCompl" classname="TestClasses.TestLogin" time="0"/>
+  <testcase name="TestPhoneNum" classname="TestClasses.TestLogin" time="0.001"/>
+  <testcase name="TestIncorrectPassword" classname="TestClasses.TestLogin" time="0"/>
   <testcase name="TestCorrectUserName" classname="TestClasses.TestLogin" time="0"/>
-  <testcase name="TestLoginPass" classname="TestClasses.TestLogin" time="0.001"/>
+  <testcase name="TestLoginPass" classname="TestClasses.TestLogin" time="0"/>
   <testcase name="TestCorrectCellphone" classname="TestClasses.TestLogin" time="0"/>
   <testcase name="TestPassCompl" classname="TestClasses.TestLogin" time="0.001"/>
-  <testcase name="TestIncorrectCellphone" classname="TestClasses.TestLogin" time="0.001">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at TestClasses.TestLogin.TestIncorrectCellphone(TestLogin.java:54)
-]]></failure>
-    <system-out><![CDATA[Cell phone number successfully added.
-Cell phone number incorrectly formatted or does not contain international code.
-]]></system-out>
-  </testcase>
+  <testcase name="TestIncorrectCellphone" classname="TestClasses.TestLogin" time="0"/>
   <testcase name="TestCorrectPassword" classname="TestClasses.TestLogin" time="0"/>
-  <testcase name="TestUSERNAME" classname="TestClasses.TestLogin" time="0"/>
+  <testcase name="TestUSERNAME" classname="TestClasses.TestLogin" time="0.001"/>
 </testsuite>
