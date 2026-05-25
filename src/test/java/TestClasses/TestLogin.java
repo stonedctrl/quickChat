@@ -5,6 +5,7 @@
 package TestClasses;
 
 import com.mycompany.quickchat.Login;
+import com.mycompany.quickchat.Message;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -100,4 +101,51 @@ public class TestLogin {
        assertFalse(expected);
        }
        
+       @Test
+       public void TestAmountChar() {
+           String expected = "A short message";
+           String actual="Hi Mike, can you join us for dinner tonight?";
+           assertEquals(expected.length()<250, actual.length()<250);
+       }
+       
+       @Test
+       public void TestIncAmountChar() {
+           String expected ="A looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong message"
+;
+           String actual="Hi Mike, can yooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooou join us for dinner tonight?";
+           assertEquals(expected.length()>250, actual.length()>250);
+       }
+       
+       @Test
+       public void TestRecipientCell() {
+       boolean expected= Login.checkCellPhoneNumber("+27123456789");
+       boolean actual= Login.checkCellPhoneNumber("+27838968976");
+       assertEquals(expected, actual);
+   }
+   //tests if phone number is formatted correctly = false
+       @Test
+       public void TestIncorrectRecipientCell() {
+       boolean expected= Login.checkCellPhoneNumber("12345678");
+       boolean actual= Login.checkCellPhoneNumber("08966553");
+       assertEquals(expected, actual);
+       }
+       
+       @Test
+       public void TestMessageHash(){
+           String expected = Message.createMessageHash("6266735257",00,"Hi Mike, can you join us for dinner tonight?");
+           String actual = Message.createMessageHash("6266735257",00,"Hi Mike, can you join us for dinner tonight?");
+           assertEquals(expected,actual);
+       }
+       @Test
+       public void TestIncHash(){
+           String expected = Message.createMessageHash("66735257",00,"Hi Mike, can you join us for dinner tonight?");
+           String actual = Message.createMessageHash("6266735",1,"Hi Mike, dinner tonight?");
+           assertNotEquals(expected,actual);
+       }
+       
+       @Test
+       public void TestMessageID(){
+           String rand = "7086382488";
+           String actual = Message.checkMessageId(rand);
+       }
 }
