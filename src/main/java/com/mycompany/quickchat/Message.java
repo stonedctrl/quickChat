@@ -68,6 +68,9 @@ public class Message{
      public static int returnTotalMessages(int numMessagesSent){
          return numMessagesSent;
      }
+     public static String generateMessageIDMessage(String rand){
+         return "Message ID generated: " + rand;
+     }
 
      public static void storeMessage(String rand, String hash, String recipient, String msgStr) {
         Gson gson = new Gson();

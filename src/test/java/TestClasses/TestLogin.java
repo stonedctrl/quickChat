@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
 package TestClasses;
-
+import java.util.ArrayList;
 import com.mycompany.quickchat.Login;
 import com.mycompany.quickchat.Message;
 import org.junit.jupiter.api.Test;
@@ -62,6 +62,11 @@ public class TestLogin {
     @Test
        public void TestLoginPass() {
        boolean expected= Login.loginUser(Login.username = "ka_mo", Login.password="U$3rN@m3");
+       assertTrue(expected);
+   }
+    @Test
+       public void TestLoginFail() {
+       boolean expected= Login.loginUser(Login.username = "kamo", Login.password="U$3rN@m3");
        assertTrue(expected);
    }
        //tests if username format is correct = true
@@ -146,6 +151,45 @@ public class TestLogin {
        @Test
        public void TestMessageID(){
            String rand = "7086382488";
-           String actual = Message.checkMessageId(rand);
+           String actual = "Message ID generated: 7086382488";
+           String expected= Message.generateMessageIDMessage(rand);
+           assertEquals(expected, actual);
+           
        }
+       
+       @Test
+       public void TestSendMessage1(){
+            ArrayList<String> msg = new ArrayList<>();
+            ArrayList<Long> msgId = new ArrayList<>();
+            ArrayList<String> msgHash = new ArrayList<>();
+            msg.add("Hi Mike, can you join us for dinner tonight?");
+            msgId.add(7086382488L);
+            msgHash.add("70:0:HITONIGHT");
+            String expected = "Message successfully sent.";
+            String actual = Message.sentMessage(1, msg, msgId, msgHash);
+            assertEquals(expected, actual);
+}       
+       @Test
+       public void TestSendMessage2(){
+            ArrayList<String> msg = new ArrayList<>();
+            ArrayList<Long> msgId = new ArrayList<>();
+            ArrayList<String> msgHash = new ArrayList<>();
+            msg.add("Hi Mike, can you join us for dinner tonight?");
+            msgId.add(7086382488L);
+            msgHash.add("70:0:HITONIGHT");
+            String expected = "Press 0 to delete the message.";
+            String actual = Message.sentMessage(2, msg, msgId, msgHash);
+            assertEquals(expected, actual);}
+        @Test
+        public void TestSendMessage3(){
+            ArrayList<String> msg = new ArrayList<>();
+            ArrayList<Long> msgId = new ArrayList<>();
+            ArrayList<String> msgHash = new ArrayList<>();
+            msg.add("Hi Mike, can you join us for dinner tonight?");
+            msgId.add(7086382488L);
+            msgHash.add("70:0:HITONIGHT");
+            String expected = "Message successfully stored.";
+            String actual = Message.sentMessage(3, msg, msgId, msgHash);
+            assertEquals(expected, actual);
+}
 }
