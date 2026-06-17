@@ -83,6 +83,18 @@ public class Message{
         System.out.println("Error storing message.");
     }
      }
+     public static ArrayList<String> readStoredMessages(){
+    ArrayList<String> stored = new ArrayList<>();
+    try(java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.FileReader("storedMessages.json"))){
+        String line;
+        while((line = reader.readLine()) != null){
+            stored.add(line);
+        }
+    } catch(IOException e){
+        System.out.println("No stored messages found.");
+    }
+    return stored;
+}
 }
 
 

@@ -67,7 +67,7 @@ public class TestLogin {
     @Test
        public void TestLoginFail() {
        boolean expected= Login.loginUser(Login.username = "kamo", Login.password="U$3rN@m3");
-       assertTrue(expected);
+       assertFalse(expected);
    }
        //tests if username format is correct = true
     @Test
@@ -192,4 +192,55 @@ public class TestLogin {
             String actual = Message.sentMessage(3, msg, msgId, msgHash);
             assertEquals(expected, actual);
 }
+        @Test
+        public void TestSentArray(){
+            ArrayList<String> sentMessages = new ArrayList<>();
+            sentMessages.add("Did you get the cake?");
+            sentMessages.add("It is dinner time!");
+            assertEquals("Did you get the cake?", sentMessages.get(0));
+            assertEquals("It is dinner time!", sentMessages.get(1));
+        }
+
+        @Test
+        public void TestLongestMessage(){
+            ArrayList<String> messages = new ArrayList<>();
+            messages.add("Did you get the cake?");
+            messages.add("Where are you? You are late! I have asked you to be on time.");
+            messages.add("Yohoooo, I am at your gate.");
+            messages.add("It is dinner time!");
+            String longest = "";
+            for(String m : messages){
+                if(m.length() > longest.length()) longest = m;
+            }
+            assertEquals("Where are you? You are late! I have asked you to be on time.", longest);
+        }
+
+        @Test
+        public void TestSearchRecipient(){
+            ArrayList<String> messages = new ArrayList<>();
+            ArrayList<String> recipients = new ArrayList<>();
+            messages.add("Where are you? You are late! I have asked you to be on time.");
+            messages.add("Ok, I am leaving without you.");
+            recipients.add("+27838884567");
+            recipients.add("+27838884567");
+            ArrayList<String> results = new ArrayList<>();
+            for(int i=0; i<recipients.size(); i++){
+                if(recipients.get(i).equals("+27838884567")) results.add(messages.get(i));
+            }
+            assertEquals(2, results.size());
+        }
+
+        @Test
+        public void TestDeleteByHash(){
+            ArrayList<String> messages = new ArrayList<>();
+            ArrayList<String> hashes = new ArrayList<>();
+            messages.add("Where are you? You are late! I have asked you to be on time.");
+            hashes.add("62:1:WHERETIME");
+            int indexToDelete = hashes.indexOf("62:1:WHERETIME");
+            String deleted = messages.get(indexToDelete);
+            messages.remove(indexToDelete);
+            hashes.remove(indexToDelete);
+            assertEquals("Where are you? You are late! I have asked you to be on time.", deleted);
+            assertEquals(0, messages.size());
+        }
 }

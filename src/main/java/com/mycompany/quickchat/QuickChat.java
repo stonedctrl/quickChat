@@ -45,6 +45,8 @@ public class QuickChat {
         ArrayList<Long> msgId = new ArrayList<>();
         ArrayList<String> msgHash = new ArrayList<>();
         ArrayList<String> recipients = new ArrayList<>();
+        ArrayList<String> disregardedMsg = new ArrayList<>();
+        
         
         int option;
         int numMessagesSent=0;
@@ -77,8 +79,11 @@ public class QuickChat {
             System.out.println(Login.returnLoginStatus(loginName,loginPass));
         }
         
+                
+        ArrayList<String> storedMsg = Message.readStoredMessages();
+
         while(Login.loginUser(loginName, loginPass)){
-        System.out.println("Welcome to QuickChat \nOption 1) Send Messages \nOption 2) Show recently sent messages - This feature is is still under development. \nOption 3) Quit \n");
+        System.out.println("Welcome to QuickChat \nOption 1) Send Messages \nOption 2) Show recently sent messages. \nOption 3) Quit \nOption 4) Stored Messages \n");
         option = Integer.parseInt(scn.nextLine());
            
         
@@ -106,7 +111,7 @@ public class QuickChat {
                     long max = 10_000_000_000L;
                     long randomNum = ThreadLocalRandom.current().nextLong(min, max);
                     
-
+                    
 
                     while(msgId.contains(randomNum)){
                         randomNum = ThreadLocalRandom.current().nextLong(min, max);
@@ -141,13 +146,16 @@ public class QuickChat {
                             String confirm = scn.nextLine();
                             if(confirm.equals("0")){
                                 System.out.println("Message deleted.");
+                                disregardedMsg.add(msgStr);
                                 if (numMessagesSent>0){
                                 numMessagesSent--;}
                             }
                             }
                         else if(sendOption == 3){
+                            storedMsg.add(msgStr); 
                             Message.storeMessage(rand, hash, recipientNumber, msgStr);
-}
+                        }
+                        
                            
 
                         
@@ -170,14 +178,62 @@ public class QuickChat {
                 loginName= "";
                 loginPass="";
             }
+            
+            else if(option == 4){
+                System.out.println("a) Show all recipients\nb) Longest message\nc) Search by ID\nd) Search by recipient\ne) Delete by hash\nf) Report");
+                String subOption = scn.nextLine();
     
-            else {
-                int i = 0;
-                while(i<option) {
-                   i++;
-                System.out.println("why");
+                if(subOption.equals("a")){
+                    for(int i=0; i<msg.size(); i++){
+                        System.out.println("Recipient: " + recipients.get(i) + " Message: " + msg.get(i));
+                    }
+                }
+                else if(subOption.equals("b")){
+                    String longest = "";
+                    for(String m : msg){
+                        if(m.length() > longest.length()) longest = m;
+                    }
+                    System.out.println("Longest message: " + longest);
+                }
+                else if(subOption.equals("c")){
+                    System.out.println("Enter message ID: ");
+                    String searchId = scn.nextLine();
+                    for(int i=0; i<msgId.size(); i++){
+                        if(String.valueOf(msgId.get(i)).equals(searchId)){
+                            System.out.println(recipients.get(i) + ": " + msg.get(i));
+                        }
+                    }
+                }
+                else if(subOption.equals("d")){
+                    System.out.println("Enter recipient number: ");
+                    String searchRec = scn.nextLine();
+                    for(int i=0; i<recipients.size(); i++){
+                        if(recipients.get(i).equals(searchRec)){
+                            System.out.println(msg.get(i));
+                        }
+                    }
+                }
+                else if(subOption.equals("e")){
+                    System.out.println("Enter message hash: ");
+                    String searchHash = scn.nextLine();
+                    for(int i=0; i<msgHash.size(); i++){
+                        if(msgHash.get(i).equals(searchHash)){
+                            System.out.println("Message: \"" + msg.get(i) + "\" successfully deleted.");
+                            msg.remove(i);
+                            msgId.remove(i);
+                            msgHash.remove(i);
+                            recipients.remove(i);
+                            break;
+                        }
+                    }
+                }
+                else if(subOption.equals("f")){
+                    for(int i=0; i<msg.size(); i++){
+                        System.out.println(Message.printMessage(String.valueOf(msgId.get(i)), msgHash.get(i), recipients.get(i), msg.get(i)));
+                    }
+                }
             }
-                
+           
             }
             
         }
@@ -188,4 +244,4 @@ public class QuickChat {
     
 
 
-}
+
